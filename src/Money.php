@@ -27,9 +27,9 @@ class Money extends Number
         ]);
 
         $this->fillUsing(function (NovaRequest $request, $model, $attribute, $requestAttribute) {
-            $amount = (int) $request[$requestAttribute] ** 10;
+            $amount = (int) $request[$requestAttribute];
             $currency = (string) $request[$requestAttribute.'__currency'];
-            $model->{$attribute} = \Money\Money::{$currency}($amount);
+            $model->{$attribute} = \Money\Money::{$currency}($amount * 100);
         });
     }
 
