@@ -1,0 +1,31 @@
+{
+  "name": "sashalenz/nova-money-field",
+  "description": "A Laravel Nova field for Money.",
+  "keywords": [
+    "laravel",
+    "nova",
+    "money"
+  ],
+  "license": "MIT",
+  "require": {
+    "php": ">=7.1.0",
+    "moneyphp/money": "^3.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sashalenz\\NovaMoneyField\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Sashalenz\\NovaMoneyField\\FieldServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
