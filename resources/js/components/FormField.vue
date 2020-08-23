@@ -66,6 +66,7 @@
              */
             fill(formData) {
                 formData.append(this.field.attribute, this.value || 0)
+                formData.append(this.field.attribute+'__currency', this.field.value.currency)
             },
 
             /**
